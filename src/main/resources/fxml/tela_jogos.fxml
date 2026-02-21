@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="728.0" prefWidth="983.0" style="-fx-background-color: #E8ECEF;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.ingressosjogos.controller.Tela_jogosController">
+   <children>
+      <Label layoutX="370.0" layoutY="30.0" text="Jogos Disponíveis" textFill="#333333">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="30.0" text="Jogos Disponíveis" textFill="#333333">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      
+      
+      <HBox alignment="CENTER_LEFT" layoutX="133.0" layoutY="16.0" prefWidth="836.0" spacing="20.0" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+         <children>
+            <Label fx:id="lblNomeUsuario" text="Olá, Usuário!" textFill="#333333">
+               <font><Font name="System Bold" size="18.0" /></font>
+            </Label>
+            
+            <HBox alignment="CENTER_RIGHT" spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnMinhasCompras" mnemonicParsing="false" onAction="#abrirMinhasCompras" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand; -fx-padding: 8 15;" text="🎫 Minhas Compras" />
+                  
+                  <Button fx:id="btnCadastrarAdmin" mnemonicParsing="false" onAction="#abrirTelaCadastro" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand; -fx-padding: 8 15;" text="➕ Cadastrar Jogo (Admin)" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ScrollPane fitToWidth="true" layoutX="115.0" layoutY="99.0" prefHeight="530.0" prefWidth="836.0" style="-fx-background-color: transparent; -fx-background: #E8ECEF;">
+         <content>
+            <FlowPane fx:id="painelJogos" alignment="TOP_CENTER" hgap="25.0" vgap="25.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               
+               <VBox prefHeight="300.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-padding: 20;">
+                  <children>
+                     <HBox alignment="CENTER" spacing="10.0">
+                        <children>
+                           <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Time Casa" />
+                           <Label style="-fx-font-weight: bold; -fx-text-fill: #888;" text="X" />
+                           <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Time Fora" />
+                        </children>
+                     </HBox>
+                     <Label style="-fx-text-fill: #555; -fx-font-size: 14px;" text="📍 Nome do Estádio" />
+                     <Label alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #555; -fx-font-size: 14px; -fx-background-color: #f0f0f0; -fx-padding: 5; -fx-background-radius: 5;" text="📅 DD/MM/AAAA às HH:MM" />
+                     <HBox alignment="CENTER_LEFT" spacing="20.0">
+                        <children>
+                           <Label style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-text-fill: #28a745;" text="R$ 100,00" />
+                           <Button mnemonicParsing="false" style="-fx-background-color: #ff8c00; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-weight: bold; -fx-cursor: hand;" text="Comprar" />
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               
+            </FlowPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

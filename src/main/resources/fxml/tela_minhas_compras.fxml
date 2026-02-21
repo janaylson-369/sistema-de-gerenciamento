@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="658.0" prefWidth="936.0" style="-fx-background-color: #E8ECEF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ingressosjogos.controller.Tela_minhas_comprasController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="20.0" prefWidth="836.0" spacing="20.0" style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+         <children>
+            <Label text="🎫 Meus Ingressos Comprados" textFill="#333333">
+               <font><Font name="System Bold" size="20.0" /></font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#voltarParaJogos" style="-fx-background-color: #6c757d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand; -fx-padding: 8 15;" text="⬅️ Voltar" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ScrollPane fitToWidth="true" layoutX="50.0" layoutY="90.0" prefHeight="530.0" prefWidth="836.0" style="-fx-background-color: transparent;">
+         <content>
+            <FlowPane fx:id="painelIngressos" alignment="TOP_CENTER" hgap="25.0" vgap="25.0">
+               <padding><Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /></padding>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.CheckBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="666.0" prefWidth="851.0" style="-fx-background-color: #E8ECEF;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="com.ingressosjogos.controller.FXMLingressosController">
+    <children>
+        <VBox alignment="CENTER" layoutX="200.0" layoutY="75.0" prefHeight="450.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-padding: 30;">
+            <children>
+                <Label text="🎟️ Bem-vindo ao Sistema" textFill="#333333">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+                <Label text="Identifique-se para comprar ingressos" textFill="#666666">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+
+                <VBox spacing="5.0">
+                    <Label style="-fx-font-weight: bold; -fx-text-fill: #555;" text="Nome Completo:" />
+                    <TextField fx:id="campoNome" prefHeight="35.0" promptText="Digite seu nome..." style="-fx-background-radius: 5; -fx-border-color: #ccc; -fx-border-radius: 5;" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label style="-fx-font-weight: bold; -fx-text-fill: #555;" text="E-mail:" />
+                    <TextField fx:id="campoEmail" prefHeight="35.0" promptText="exemplo@email.com" style="-fx-background-radius: 5; -fx-border-color: #ccc; -fx-border-radius: 5;" />
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <Label style="-fx-font-weight: bold; -fx-text-fill: #555;" text="CPF:" />
+                    <TextField fx:id="campoCPF" prefHeight="35.0" promptText="Somente números" style="-fx-background-radius: 5; -fx-border-color: #ccc; -fx-border-radius: 5;" />
+                </VBox>
+                <CheckBox fx:id="checkAdmin" text="Acessar como Administrador do Sistema" textFill="#555555">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </CheckBox>
+                <Button mnemonicParsing="false" onAction="#salvarTorcedor" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #ff8c00; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-background-radius: 5; -fx-cursor: hand;" text="Acessar / Cadastrar" />
+
+                <Label fx:id="labelMensagem" alignment="CENTER" textAlignment="CENTER" textFill="RED" wrapText="true" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
